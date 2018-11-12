@@ -1,6 +1,6 @@
 <?php
-
-echo "hello";
+$nom = "Val";
+echo $nom;
 echo " goodbye";
 
 ?>
