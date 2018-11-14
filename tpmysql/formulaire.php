@@ -36,7 +36,7 @@ catch (Exception $e)
         while ($donnees = $reponse->fetch())
         {
             ?>
-            <option value="<?php echo $donnees['name_user']; ?>" name="name_user"> <?if (isset($_POST['champListe']) && $_POST['champListe']== "client"){echo "selected";}?></option>
+            <option value="<?php echo $donnees['name_user']; ?>" name="name_user"> <?php echo $donnees['name_user']; ?></option>
             <?php
 
         }
