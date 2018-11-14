@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 try
 {
@@ -9,11 +10,16 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-if(isset($_POST["user"])){
-    $req = $bdd->prepare('INSERT INTO utilisateur (name_user) VALUES(?)');
-    $req->execute(array($_POST['name']));
-}
 
+
+$req = $bdd->prepare('INSERT INTO utilisateur(name_user, contenu) VALUES(:name_user, :contenu)');
+$req->execute(array(
+    'name_user' => $_POST['name'],
+    'contenu' => $_POST['user_message'],
+));
+
+
+var_dump($_POST['name']);
 header('Location: formulaire.php');
 
 ?>
