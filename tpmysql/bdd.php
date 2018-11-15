@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=formulaire;charset=utf8', 'root', 'root');
@@ -19,7 +20,7 @@ $req->execute(array(
 ));
 
 
-var_dump($_POST['name']);
+
 header('Location: formulaire.php');
 
 ?>
