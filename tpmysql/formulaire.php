@@ -53,6 +53,7 @@ displaySelect($userChoice);
 }
 
 ?>
+
  <!----------------Formulaire ajout-------------->
 
 <form method="post" action="bdd.php">
